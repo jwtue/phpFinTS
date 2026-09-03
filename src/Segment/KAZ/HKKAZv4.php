@@ -26,7 +26,7 @@ class HKKAZv4 extends BaseSegment implements Paginateable
     /** Max length: 35 */
     public ?string $aufsetzpunkt = null;
 
-    public static function create(\Fhp\Segment\Common\Kto $kto, ?\DateTime $vonDatum, ?\DateTime $bisDatum, ?string $aufsetzpunkt = null): HKKAZv4
+    public static function create(\Fhp\Segment\Common\Kto $kto, ?\DateTimeInterface $vonDatum, ?\DateTimeInterface $bisDatum, ?string $aufsetzpunkt = null): HKKAZv4
     {
         $result = HKKAZv4::createEmpty();
         $result->kontoverbindungAuftraggeber = $kto;
