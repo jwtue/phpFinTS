@@ -28,7 +28,7 @@ class HKCAZv1 extends BaseSegment implements Paginateable
     public ?string $aufsetzpunkt = null;
 
     public static function create(\Fhp\Segment\Common\Kti $kti, UnterstuetzteCamtMessages $unterstuetzteCamtMessages,
-        bool $alleKonten, ?\DateTime $vonDatum, ?\DateTime $bisDatum, ?string $aufsetzpunkt = null): HKCAZv1
+        bool $alleKonten, ?\DateTimeInterface $vonDatum, ?\DateTimeInterface $bisDatum, ?string $aufsetzpunkt = null): HKCAZv1
     {
         $result = HKCAZv1::createEmpty();
         $result->kontoverbindungInternational = $kti;

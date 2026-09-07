@@ -27,7 +27,7 @@ class HKKAZv5 extends BaseSegment implements Paginateable
     /** Max length: 35 */
     public ?string $aufsetzpunkt = null;
 
-    public static function create(\Fhp\Segment\Common\KtvV3 $ktv, bool $alleKonten, ?\DateTime $vonDatum, ?\DateTime $bisDatum, ?string $aufsetzpunkt = null): HKKAZv5
+    public static function create(\Fhp\Segment\Common\KtvV3 $ktv, bool $alleKonten, ?\DateTimeInterface $vonDatum, ?\DateTimeInterface $bisDatum, ?string $aufsetzpunkt = null): HKKAZv5
     {
         $result = HKKAZv5::createEmpty();
         $result->kontoverbindungAuftraggeber = $ktv;
